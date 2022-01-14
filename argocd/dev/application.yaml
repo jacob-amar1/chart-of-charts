@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kafka-umbrella-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jacob-amar1/chart-of-charts.git
+    targetRevision: HEAD
+    path: helm/dev
+  destination:
+      server: https://kubernetes.default.svc
+      namespace: dev
