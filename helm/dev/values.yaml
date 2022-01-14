@@ -6,5 +6,5 @@ kafka-ui:
     config:
       SERVER_SERVLET_CONTEXT_PATH: ""
       KAFKA_CLUSTERS_0_NAME: "local"
-      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: "{{ .Release.Name }}:9092"
-      KAFKA_CLUSTERS_0_ZOOKEEPER: "{{ .Release.Name }}-zookeeper:2181"
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: "kafka-umbrella:9092"
+      KAFKA_CLUSTERS_0_ZOOKEEPER: "kafka-umbrella-zookeeper:2181"
