@@ -1,2 +1,8 @@
 global:
   namespace: dev
+
+kafka-ui:
+  envs:
+    config:
+      KAFKA_CLUSTERS_0_NAME=local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka-umbrella:9092
