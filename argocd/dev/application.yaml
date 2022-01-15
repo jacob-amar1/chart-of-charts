@@ -4,7 +4,7 @@ metadata:
   name: kafka-umbrella
   namespace: argocd
 spec:
-  project: default
+  project: dev
   source:
     repoURL: https://github.com/jacob-amar1/chart-of-charts.git
     targetRevision: HEAD
