@@ -14,19 +14,9 @@ kafka-producer:
   image:
     repository: jacobamar1/kafka-producer
     tag: 0.1
-  env:
-    - name: "KAFKA_SERVER"
-      value: "kafka-umbrella:9092"
-    - name: "TOPIC"
-      value: "test"
 
 kafka-consumer:
   replicas: 1
   image:
     repository: jacobamar1/kafka-consumer
     tag: 0.1
-  env:
-    - name: "KAFKA_SERVER"
-      value: "kafka-umbrella:9092"
-    - name: "TOPIC"
-      value: "test"
