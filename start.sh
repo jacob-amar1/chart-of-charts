@@ -1,7 +1,12 @@
 #!/bin/bash
-k3d cluster create kafka-umbrella
-### installing argocd
-kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-#### applying application yaml
-kubectl apply -f argocd/dev/application.yaml
+  apps=$(ls apps/ )
+  for item in $apps
+  do
+    echo $item
+    check=$(git diff --name-only HEAD^ HEAD -- $item/ --relative)
+    if [ -z "$check" ]; then
+        echo "the tracked directory: $item did not canged skipping build"
+    else
+        echo "the tracked directory: $item has been changed, building docker file"
+    fi
+  done
