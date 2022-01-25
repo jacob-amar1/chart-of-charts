@@ -1,6 +1,0 @@
-shared:
-  env:
-    - name: "KAFKA_SERVER"
-      value: "kafka-umbrella:9092"
-    - name: "TOPIC"
-      value: "test"

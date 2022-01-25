@@ -1,4 +1,0 @@
-apiVersion: v2
-name: "shared"
-version: "0.0.1"
-type: library

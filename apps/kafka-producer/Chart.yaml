@@ -1,7 +1,0 @@
-apiVersion: v2
-name: "kafka-producer"
-version: "0.1"
-dependencies:
-  - name: shared
-    repository: file://../../shared
-    version: "0.0.1"
